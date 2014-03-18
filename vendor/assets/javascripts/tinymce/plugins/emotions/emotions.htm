@@ -1,45 +1,427 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<title>{#emotions_dlg.title}</title>
-	<script>
-	  document.domain = "scholastic.com";
-	</script>
-	<script type="text/javascript" src="../../tiny_mce_popup.js"></script>
-	<script type="text/javascript" src="js/emotions.js"></script>
+  <title>{#emotions_dlg.title}</title>
+  <script>
+    document.domain = "scholastic.com";
+  </script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+  <script type="text/javascript" src="../../tiny_mce_popup.js"></script>
+  <script type="text/javascript" src="js/emotions.js"></script>
+  <base target="_self" />
 </head>
-<body style="display: none" role="application" aria-labelledby="app_title">
-<span style="display:none;" id="app_title">{#emotions_dlg.title}</span>
-<div align="center">
-	<div class="title">{#emotions_dlg.title}:<br /><br /></div>
+<body style="display: none">
+    <div class="title"><div id="description">Choose an emoticon:</div><br /></div>
+    <div style="height:165px;overflow-y:scroll;">
+        <table class="emoticon_table" border="0" cellspacing="0" cellpadding="4">
+            <tr>
+	      <td>
+		<a class="emoticon_link" href="javascript:EmotionsDialog.insert('01_Smiley.png','Smiley');" >
+		  <img src="img/01_Smiley.png" border="0" alt="Smiley" title="Smiley" />
+		</a>
+	      </td>
+	      <td>
+		<a class="emoticon_link" href="javascript:EmotionsDialog.insert('02_Sad_Face.png','Sad Face');">
+		  <img src="img/02_Sad_Face.png" border="0" alt="Sad Face" title="Sad Face" />
+		</a>
+	      </td>
+	      <td>
+		<a class="emoticon_link" href="javascript:EmotionsDialog.insert('03_In_Love.png','In Love');">
+		  <img src="img/03_In_Love.png" border="0" alt="In Love" title="In Love" />
+		</a>
+	      </td>
+	      <td>
+		<a class="emoticon_link" href="javascript:EmotionsDialog.insert('04_Wink.png','Wink');">
+		  <img src="img/04_Wink.png" border="0" alt="Wink" title="Wink" />
+		</a>
+	      </td>
+	      <td>
+		<a class="emoticon_link" href="javascript:EmotionsDialog.insert('05_Angry.png','Angry');">
+		  <img src="img/05_Angry.png" border="0" alt="Angry" title="Angry" />
+		</a>
+	      </td>
+	      <td>
+		<a class="emoticon_link" href="javascript:EmotionsDialog.insert('06_What_the_what.png','What the what?');">
+		  <img src="img/06_What_the_what.png" border="0" alt="What the what?" title="What the what?" />
+		</a>
+	      </td>
+	      <td>
+		<a class="emoticon_link" href="javascript:EmotionsDialog.insert('07_Sick_To_My_Stomach.png','');">
+		  <img src="img/07_Sick_To_My_Stomach.png" border="0" alt="Sick to my stomach" title="Sick to my stomach" />
+		</a>
+	      </td>
+	      <td>
+		<a class="emoticon_link" href="javascript:EmotionsDialog.insert('08_Ugh.png','Ugh');">
+		  <img src="img/08_Ugh.png" border="0" alt="Ugh" title="Ugh" />
+		</a>
+	      </td>
+	    </tr>
+	    <tr>
+	      <td>
+		<a class="emoticon_link" href="javascript:EmotionsDialog.insert('09_LOL.png','LOL');">
+		  <img src="img/09_LOL.png" border="0" alt="LOL" title="LOL" />
+		</a>
+	      </td>
+	      <td>
+		<a class="emoticon_link" href="javascript:EmotionsDialog.insert('10_Evil_Laugh.png','Evil Laught');">
+		  <img src="img/10_Evil_Laugh.png" border="0" alt="Evil Laught" title="Evil Laught" />
+		</a>
+	      </td>
+	      <td>
+		<a class="emoticon_link" href="javascript:EmotionsDialog.insert('11_I_Can_t_Believe_This.png','I can\'t believe this');">
+		  <img src="img/11_I_Can_t_Believe_This.png" border="0" alt="I can't believe this" title="I can't believe this" />
+		</a>
+	      </td>
+	      <td>
+		<a class="emoticon_link" href="javascript:EmotionsDialog.insert('12_Cries.png','Cries');">
+		  <img src="img/12_Cries.png" border="0" alt="Cries" title="Cries" />
+		</a>
+	      </td>
+	      <td>
+		<a class="emoticon_link" href="javascript:EmotionsDialog.insert('13_Madrigal_Crest.png','Madrigal Crest');">
+		  <img src="img/13_Madrigal_Crest.png" border="0" alt="Madrigal Crest" title="Madrigal Crest" />
+		</a>
+	      </td>
+	      <td>
+		<a class="emoticon_link" href="javascript:EmotionsDialog.insert('14_Cahill_Crest.png','Cahill Crest');">
+		  <img src="img/14_Cahill_Crest.png" border="0" alt="Cahill Crest" title="Cahill Crest" />
+		</a>
+	      </td>
+	      <td>
+		<a class="emoticon_link" href="javascript:EmotionsDialog.insert('15_Ekat_Crest.png','Ekat Crest');">
+		  <img src="img/15_Ekat_Crest.png" border="0" alt="Ekat Crest" title="Ekat Crest" />
+		</a>
+	      </td>
+	      <td>
+		<a class="emoticon_link" href="javascript:EmotionsDialog.insert('16_Janus_Crest.png','Janus Crest');">
+		  <img src="img/16_Janus_Crest.png" border="0" alt="Janus Crest" title="Janus Crest" />
+		</a>
+	      </td>
+	    </tr>
+	    <tr>
+	      <td>
+		<a class="emoticon_link" href="javascript:EmotionsDialog.insert('17_Lucian_Crest.png','Lucian Crest');">
+		  <img src="img/17_Lucian_Crest.png" border="0" alt="Lucian Crest" title="Lucian Crest" />
+		</a>
+	      </td>
+	      <td>
+		<a class="emoticon_link" href="javascript:EmotionsDialog.insert('18_Tomas_Crest.png','Tomas Crest');">
+		  <img src="img/18_Tomas_Crest.png" border="0" alt="Tomas Crest" title="Tomas Crest" />
+		</a>
+	      </td>
+	      <td>
+		<a class="emoticon_link" href="javascript:EmotionsDialog.insert('19_Madrigal.png','Madrigal');">
+		  <img src="img/19_Madrigal.png" border="0" alt="Madrigal" title="Madrigal" />
+		</a>
+	      </td>
+	      <td>
+		<a class="emoticon_link" href="javascript:EmotionsDialog.insert('20_Cahill.png','Cahill');">
+		  <img src="img/20_Cahill.png" border="0" alt="Cahill" title="Cahill" />
+		</a>
+	      </td>
+	      <td>
+		<a class="emoticon_link" href="javascript:EmotionsDialog.insert('21_Ekat_Dragon.png','Ekat Dragon');">
+		  <img src="img/21_Ekat_Dragon.png" border="0" alt="Ekat Dragon" title="Ekat Dragon" />
+		</a>
+	      </td>
+	      <td>
+		<a class="emoticon_link" href="javascript:EmotionsDialog.insert('22_Janus_Wolf.png','Janus Wolf');">
+		  <img src="img/22_Janus_Wolf.png" border="0" alt="Janus Wolf" title="Janus Wolf" />
+		</a>
+	      </td>
+	      <td>
+		<a class="emoticon_link" href="javascript:EmotionsDialog.insert('23_Lucian_Snake.png','Lucian Snake');">
+		  <img src="img/23_Lucian_Snake.png" border="0" alt="Lucian Snake" title="Lucian Snake" />
+		</a>
+	      </td>
+	      <td>
+		<a class="emoticon_link" href="javascript:EmotionsDialog.insert('24_Tomas_Bear.png','Tomas Bear');">
+		  <img src="img/24_Tomas_Bear.png" border="0" alt="Tomas Bear" title="Tomas Bear" />
+		</a>
+	      </td>
+	    </tr>
+	    <tr>
+	      <td>
+		<a class="emoticon_link" href="javascript:EmotionsDialog.insert('25_Saladin_League.png','Saladin League');">
+		  <img src="img/25_Saladin_League.png" border="0" alt="Saladin League" title="Saladin League" />
+		</a>
+	      </td>
+	      <td>
+		<a class="emoticon_link" href="javascript:EmotionsDialog.insert('26_Icecream.png','Icecream');">
+		  <img src="img/26_Icecream.png" border="0" alt="Icecream" title="Icecream" />
+		</a>
+	      </td>
+	      <td>
+		<a class="emoticon_link" href="javascript:EmotionsDialog.insert('27_Dog_Tag.png','Dog Tag');">
+		  <img src="img/27_Dog_Tag.png" border="0" alt="Dog Tag" title="Dog Tag" />
+		</a>
+	      </td>
+	      <td>
+		<a class="emoticon_link" href="javascript:EmotionsDialog.insert('28_Crossed_Axes.png','Crossed Axes');">
+		  <img src="img/28_Crossed_Axes.png" border="0" alt="Crossed Axes" title="Crossed Axes" />
+		</a>
+	      </td>
+	      <td>
+		<a class="emoticon_link" href="javascript:EmotionsDialog.insert('29_Science_Experiment.png','Science Experiment');">
+		  <img src="img/29_Science_Experiment.png" border="0" alt="Science Experiment" title="Science Experiment" />
+		</a>
+	      </td>
+	      <td>
+		<a class="emoticon_link" href="javascript:EmotionsDialog.insert('30_Cake.png','Cake');">
+		  <img src="img/30_Cake.png" border="0" alt="Cake" title="Cake" />
+		</a>
+	      </td>
+	      <td>
+		<a class="emoticon_link" href="javascript:EmotionsDialog.insert('31_Trophy.png','Trophy');">
+		  <img src="img/31_Trophy.png" border="0" alt="Trophy" title="Trophy" />
+		</a>
+	      </td>
+	      <td>
+		<a class="emoticon_link" href="javascript:EmotionsDialog.insert('32_Musical_Note.png','Musical Note');">
+		  <img src="img/32_Musical_Note.png" border="0" alt="Musical Note" title="Musical Note" />
+		</a>
+	      </td>
+	    </tr>
+	    <tr>
+	      <td>
+		<a class="emoticon_link" href="javascript:EmotionsDialog.insert('33_Announcements.png','Announcements');">
+		  <img src="img/33_Announcements.png" border="0" alt="Announcements" title="Announcements" />
+		</a>
+	      </td>
+	      <td>
+		<a class="emoticon_link" href="javascript:EmotionsDialog.insert('34_Puzzle_Piece.png','Puzzle Piece');">
+		  <img src="img/34_Puzzle_Piece.png" border="0" alt="Puzzle Piece" title="Puzzle Piece" />
+		</a>
+	      </td>
+	      <td>
+		<a class="emoticon_link" href="javascript:EmotionsDialog.insert('35_Tomas_Weight.png','Tomas Weights');">
+		  <img src="img/35_Tomas_Weight.png" border="0" alt="Tomas Weights" title="Tomas Weights" />
+		</a>
+	      </td>
+	      <td>
+		<a class="emoticon_link" href="javascript:EmotionsDialog.insert('36_Present.png','Present');">
+		  <img src="img/36_Present.png" border="0" alt="Present" title="Present" />
+		</a>
+	      </td>
+	      <td>
+		<a class="emoticon_link" href="javascript:EmotionsDialog.insert('37_Circuit.png','Circuit');">
+		  <img src="img/37_Circuit.png" border="0" alt="Circuit" title="Circuit" />
+		</a>
+	      </td>
+	      <td>
+		<a class="emoticon_link" href="javascript:EmotionsDialog.insert('38_Cloud.png','Cloud');">
+		  <img src="img/38_Cloud.png" border="0" alt="Cloud" title="Cloud" />
+		</a>
+	      </td>
+	      <td>
+		<a class="emoticon_link" href="javascript:EmotionsDialog.insert('39_Lightning.png','Lightning');">
+		  <img src="img/39_Lightning.png" border="0" alt="Lightning" title="Lightning" />
+		</a>
+	      </td>
+	      <td>
+		<a class="emoticon_link" href="javascript:EmotionsDialog.insert('40_Shooting_Star.png','Shooting Star');">
+		  <img src="img/40_Shooting_Star.png" border="0" alt="Shooting Star" title="Shooting Star" />
+		</a>
+	      </td>
+	    </tr>
+	    <tr>
+	      <td>
+		<a class="emoticon_link" href="javascript:EmotionsDialog.insert('41_Ekat_Ninja.png','Ekat Ninja');">
+		  <img src="img/41_Ekat_Ninja.png" border="0" alt="Ekat Ninja" title="Ekat Ninja" />
+		</a>
+	      </td>
+	      <td>
+		<a class="emoticon_link" href="javascript:EmotionsDialog.insert('42_Janus_Ninja.png','Janus Ninja');">
+		  <img src="img/42_Janus_Ninja.png" border="0" alt="Janus Ninja" title="Janus Ninja" />
+		</a>
+	      </td>
+	      <td>
+		<a class="emoticon_link" href="javascript:EmotionsDialog.insert('43_Lucian_Ninja.png','Lucian Ninja');">
+		  <img src="img/43_Lucian_Ninja.png" border="0" alt="Lucian Ninja" title="Lucian Ninja" />
+		</a>
+	      </td>
+	      <td>
+		<a class="emoticon_link" href="javascript:EmotionsDialog.insert('44_Tomas_Ninja.png','Tomas Ninja');">
+		  <img src="img/44_Tomas_Ninja.png" border="0" alt="Tomas Ninja" title="Tomas Ninja" />
+		</a>
+	      </td>
+	      <td>
+		<a class="emoticon_link" href="javascript:EmotionsDialog.insert('45_Cahill_Ninja.png','Cahill Ninja');">
+		  <img src="img/45_Cahill_Ninja.png" border="0" alt="Cahill Ninja" title="Cahill Ninja" />
+		</a>
+	      </td>
+	      <td>
+		<a class="emoticon_link" href="javascript:EmotionsDialog.insert('46_Ekat_Key.png','Ekat Key');">
+		  <img src="img/46_Ekat_Key.png" border="0" alt="Ekat Key" title="Ekat Key" />
+		</a>
+	      </td>
+	      <td>
+		<a class="emoticon_link" href="javascript:EmotionsDialog.insert('47_Janus_Key.png','Janus Key');">
+		  <img src="img/47_Janus_Key.png" border="0" alt="Janus Key" title="Janus Key" />
+		</a>
+	      </td>
+	      <td>
+		<a class="emoticon_link" href="javascript:EmotionsDialog.insert('48_Lucian_Key.png','Lucian Key');">
+		  <img src="img/48_Lucian_Key.png" border="0" alt="Lucian Key" title="Lucian Key" />
+		</a>
+	      </td>
+	    </tr>
+	    <tr>
+	      <td>
+		<a class="emoticon_link" href="javascript:EmotionsDialog.insert('49_Tomas_Key.png','Tomas Key');">
+		  <img src="img/49_Tomas_Key.png" border="0" alt="Tomas Key" title="Tomas Key" />
+		</a>
+	      </td>
+	      <td>
+		<a class="emoticon_link" href="javascript:EmotionsDialog.insert('50_Madrigal_Key.png','Madrigal Key');">
+		  <img src="img/50_Madrigal_Key.png" border="0" alt="Madrigal Key" title="Madrigal Key" />
+		</a>
+	      </td>
+	      <td>
+		<a class="emoticon_link" href="javascript:EmotionsDialog.insert('51_39_Clues_Cahill_Key.png','39 Clues Cahill Key');">
+		  <img src="img/51_39_Clues_Cahill_Key.png" border="0" alt="39 Clues Cahill Key" title="39 Clues Cahill Key" />
+		</a>
+	      </td>
+	      <td>
+		<a class="emoticon_link" href="javascript:EmotionsDialog.insert('52_Cold_Hearted.png','Cold Hearted');">
+		  <img src="img/52_Cold_Hearted.png" border="0" alt="Cold Hearted" title="Cold Hearted" />
+		</a>
+	      </td>
+	      <td>
+		<a class="emoticon_link" href="javascript:EmotionsDialog.insert('53_Wrong_Answer.png','Wrong Answer');">
+		  <img src="img/53_Wrong_Answer.png" border="0" alt="Wrong Answer" title="Wrong Answer" />
+		</a>
+	      </td>
+	      <td>
+		<a class="emoticon_link" href="javascript:EmotionsDialog.insert('54_Right_Answer.png','Right Answer');">
+		  <img src="img/54_Right_Answer.png" border="0" alt="Right Answer" title="Right Answer" />
+		</a>
+	      </td>
+	      <td>
+		<a class="emoticon_link" href="javascript:EmotionsDialog.insert('55_Thumbs_Up.png','Thumbs Up');">
+		  <img src="img/55_Thumbs_Up.png" border="0" alt="Thumbs Up" title="Thumbs Up" />
+		</a>
+	      </td>
+	      <td>
+		<a class="emoticon_link" href="javascript:EmotionsDialog.insert('56_Thumbs_Down.png','Thumbs Down');">
+		  <img src="img/56_Thumbs_Down.png" border="0" alt="Thumbs Down" title="Thumbs Down" />
+		</a>
+	      </td>
+	    </tr>
+	    <tr>
+	      <td>
+		<a class="emoticon_link" href="javascript:EmotionsDialog.insert('57_Pawprint.png','Pawprint');">
+		  <img src="img/57_Pawprint.png" border="0" alt="Pawprint" title="Pawprint" />
+		</a>
+	      </td>
+	      <td>
+		<a class="emoticon_link" href="javascript:EmotionsDialog.insert('58_purple_hystorian.png','Purple Hystorian');">
+		  <img src="img/58_purple_hystorian.png" border="0" alt="Purple Hystorian" title="Purple Hystorian" />
+		</a>
+	      </td>
+	      <td>
+		<a class="emoticon_link" href="javascript:EmotionsDialog.insert('59_blue_hystorian.png','Blue Hystorian');">
+		  <img src="img/59_blue_hystorian.png" border="0" alt="Blue Hystorian" title="Blue Hystorian" />
+		</a>
+	      </td>
+	      <td>
+		<a class="emoticon_link" href="javascript:EmotionsDialog.insert('60_green_hystorian.png','Green Hystorian');">
+		  <img src="img/60_green_hystorian.png" border="0" alt="Green Hystorian" title="Green Hystorian" />
+		</a>
+	      </td>
+	      <td>
+		<a class="emoticon_link" href="javascript:EmotionsDialog.insert('61_purple_infinity_symbol.png','Purple Infinity Symbol');">
+		  <img src="img/61_purple_infinity_symbol.png" border="0" alt="Purple Infinity Symbol" title="Purple Infinity Symbol" />
+		</a>
+	      </td>
+	      <td>
+		<a class="emoticon_link" href="javascript:EmotionsDialog.insert('62_blue_infinity_symbol.png','Blue Infinity Symbol');">
+		  <img src="img/62_blue_infinity_symbol.png" border="0" alt="Blue Infinity Symbol" title="Blue Infinity Symbol" />
+		</a>
+	      </td>
+	      <td>
+		<a class="emoticon_link" href="javascript:EmotionsDialog.insert('63_green_infinity_symbol.png','Green Infinity Symbol');">
+		  <img src="img/63_green_infinity_symbol.png" border="0" alt="Green Infinity Symbol" title="Green Infinity Symbol" />
+		</a>
+	      </td>
+	      <td>
+		<a class="emoticon_link" href="javascript:EmotionsDialog.insert('64_yellow_infinity_symbol.png','Yellow Infinity Symbol');">
+		  <img src="img/64_yellow_infinity_symbol.png" border="0" alt="Yellow Infinity Symbol" title="Yellow Infinity Symbol" />
+		</a>
+	      </td>
+            </tr>
+	    <tr>
+	      <td>
+		<a class="emoticon_link" href="javascript:EmotionsDialog.insert('65_purple_time_warp.png','Purple Time Warp');">
+		  <img src="img/65_purple_time_warp.png" border="0" alt="Purple Time Warp" title="Purple Time Warp" />
+		</a>
+	      </td>
+	      <td>
+		<a class="emoticon_link" href="javascript:EmotionsDialog.insert('66_blue_time_warp.png','Blue Time Warp');">
+		  <img src="img/66_blue_time_warp.png" border="0" alt="Blue Time Warp" title="Blue Time Warp" />
+		</a>
+	      </td>
+	      <td>
+		<a class="emoticon_link" href="javascript:EmotionsDialog.insert('67_green_time_warp.png','Green Time Warp');">
+		  <img src="img/67_green_time_warp.png" border="0" alt="Green Time Warp" title="Green Time Warp" />
+		</a>
+	      </td>
+	      <td>
+		<a class="emoticon_link" href="javascript:EmotionsDialog.insert('68_purple_stick_fighting_ninja.png','Purple Stick Fighting Ninja');">
+		  <img src="img/68_purple_stick_fighting_ninja.png" border="0" alt="Purple Stick Fighting Ninja" title="Purple Stick Fighting Ninja" />
+		</a>
+	      </td>
+	      <td>
+		<a class="emoticon_link" href="javascript:EmotionsDialog.insert('69_blue_stick_fighting_ninja.png','Blue Stick Fighting Ninja');">
+		  <img src="img/69_blue_stick_fighting_ninja.png" border="0" alt="Blue Stick Fighting Ninja" title="Blue Stick Fighting Ninja" />
+		</a>
+	      </td>
+	      <td>
+		<a class="emoticon_link" href="javascript:EmotionsDialog.insert('70_green_stick_fighting_ninja.png','Green Stick Fighting Ninja');">
+		  <img src="img/70_green_stick_fighting_ninja.png" border="0" alt="Green Stick Fighting Ninja" title="Green Stick Fighting Ninja" />
+		</a>
+	      </td>
+	      <td>
+		<a class="emoticon_link" href="javascript:EmotionsDialog.insert('71_diamond.png','Diamond');">
+		  <img src="img/71_diamond.png" border="0" alt="Diamond" title=" Diamond" />
+		</a>
+	      </td>
+	      <td>
+		<a class="emoticon_link" href="javascript:EmotionsDialog.insert('72_a_ha_hand.png','A-ha Hand');">
+		  <img src="img/72_a_ha_hand.png" border="0" alt="A-ha Hand" title="A-ha Hand" />
+		</a>
+	      </td>
+            </tr>
+	    <tr>
+	      <td>
+		<a class="emoticon_link" href="javascript:EmotionsDialog.insert('73_cheese.png', 'Cheese');">
+		  <img src="img/73_cheese.png" border="0" alt="Cheese" title="Cheese" />
+		</a>
+	      </td>
+	      <td>
+		<a class="emoticon_link" href="javascript:EmotionsDialog.insert('74_cracker.png', 'Cracker');">
+		  <img src="img/74_cracker.png" border="0" alt="Cracker" title="Cracker" />
+		</a>
+	      </td>
+	      <td>
+		<a class="emoticon_link" href="javascript:EmotionsDialog.insert('75_cheese_on_cracker.png','Cheese On Cracker');">
+		  <img src="img/75_cheese_on_cracker.png" border="0" alt="Cheese On Cracker" title="Cheese On Cracker" />
+		</a>
+	      </td>
+	      <td>
+		<a class="emoticon_link" href="javascript:EmotionsDialog.insert('76_cheese_2.png','Cheese');">
+		  <img src="img/76_cheese_2.png" border="0" alt="Cheese" title="Cheese" />
+		</a>
+	      </td>
+            </tr>
 
-	<table id="emoticon_table" role="presentation" border="0" cellspacing="0" cellpadding="4">
-		<tr>
-			<td><a class="emoticon_link" role="button" title="{#emotions_dlg.cool}. {#emotions_dlg.usage}" href="javascript:EmotionsDialog.insert('smiley-cool.gif','emotions_dlg.cool');"><img src="img/smiley-cool.gif" width="18" height="18" border="0" alt="{#emotions_dlg.cool}. {#emotions_dlg.usage}" /></a></td>
-			<td><a class="emoticon_link" role="button" title="{#emotions_dlg.cry}. {#emotions_dlg.usage}" href="javascript:EmotionsDialog.insert('smiley-cry.gif','emotions_dlg.cry');"><img src="img/smiley-cry.gif" width="18" height="18" border="0" alt="{#emotions_dlg.cry}. {#emotions_dlg.usage}" /></a></td>
-			<td><a class="emoticon_link" role="button" title="{#emotions_dlg.embarassed}. {#emotions_dlg.usage}" href="javascript:EmotionsDialog.insert('smiley-embarassed.gif','emotions_dlg.embarassed');"><img src="img/smiley-embarassed.gif" width="18" height="18" border="0" alt="{#emotions_dlg.embarassed}. {#emotions_dlg.usage}"  /></a></td>
-			<td><a class="emoticon_link" role="button" title="{#emotions_dlg.foot_in_mouth}. {#emotions_dlg.usage}" href="javascript:EmotionsDialog.insert('smiley-foot-in-mouth.gif','emotions_dlg.foot_in_mouth');"><img src="img/smiley-foot-in-mouth.gif" width="18" height="18" border="0" alt="{#emotions_dlg.foot_in_mouth}. {#emotions_dlg.usage}" /></a></td>
-		</tr>
-		<tr>
-			<td><a class="emoticon_link" role="button" title="{#emotions_dlg.frown}. {#emotions_dlg.usage}" href="javascript:EmotionsDialog.insert('smiley-frown.gif','emotions_dlg.frown');"><img src="img/smiley-frown.gif" width="18" height="18" border="0" alt="{#emotions_dlg.frown}. {#emotions_dlg.usage}" /></a></td>
-			<td><a class="emoticon_link" role="button" title="{#emotions_dlg.innocent}. {#emotions_dlg.usage}" href="javascript:EmotionsDialog.insert('smiley-innocent.gif','emotions_dlg.innocent');"><img src="img/smiley-innocent.gif" width="18" height="18" border="0" alt="{#emotions_dlg.innocent}. {#emotions_dlg.usage}"  /></a></td>
-			<td><a class="emoticon_link" role="button" title="{#emotions_dlg.kiss}. {#emotions_dlg.usage}" href="javascript:EmotionsDialog.insert('smiley-kiss.gif','emotions_dlg.kiss');"><img src="img/smiley-kiss.gif" width="18" height="18" border="0" alt="{#emotions_dlg.kiss}. {#emotions_dlg.usage}" /></a></td>
-			<td><a class="emoticon_link" role="button" title="{#emotions_dlg.laughing}. {#emotions_dlg.usage}" href="javascript:EmotionsDialog.insert('smiley-laughing.gif','emotions_dlg.laughing');"><img src="img/smiley-laughing.gif" width="18" height="18" border="0" alt="{#emotions_dlg.laughing}. {#emotions_dlg.usage}" /></a></td>
-		</tr>
-		<tr>
-			<td><a class="emoticon_link" role="button" title="{#emotions_dlg.money_mouth}. {#emotions_dlg.usage}" href="javascript:EmotionsDialog.insert('smiley-money-mouth.gif','emotions_dlg.money_mouth');"><img src="img/smiley-money-mouth.gif" width="18" height="18" border="0" alt="{#emotions_dlg.money_mouth}. {#emotions_dlg.usage}"/></a></td>
-			<td><a class="emoticon_link" role="button" title="{#emotions_dlg.sealed}. {#emotions_dlg.usage}" href="javascript:EmotionsDialog.insert('smiley-sealed.gif','emotions_dlg.sealed');"><img src="img/smiley-sealed.gif" width="18" height="18" border="0" alt="{#emotions_dlg.sealed}. {#emotions_dlg.usage}" /></a></td>
-			<td><a class="emoticon_link" role="button" title="{#emotions_dlg.smile}. {#emotions_dlg.usage}" href="javascript:EmotionsDialog.insert('smiley-smile.gif','emotions_dlg.smile');"><img src="img/smiley-smile.gif" width="18" height="18" border="0" alt="{#emotions_dlg.smile}. {#emotions_dlg.usage}" /></a></td>
-			<td><a class="emoticon_link" role="button" title="{#emotions_dlg.surprised}. {#emotions_dlg.usage}" href="javascript:EmotionsDialog.insert('smiley-surprised.gif','emotions_dlg.surprised');"><img src="img/smiley-surprised.gif" width="18" height="18" border="0" alt="{#emotions_dlg.surprised}. {#emotions_dlg.usage}" /></a></td>
-		</tr>
-		<tr>
-			<td><a class="emoticon_link" role="button" title="{#emotions_dlg.tongue_out}. {#emotions_dlg.usage}" href="javascript:EmotionsDialog.insert('smiley-tongue-out.gif','emotions_dlg.tongue_out');"><img src="img/smiley-tongue-out.gif" width="18" height="18" border="0" alt="{#emotions_dlg.tongue-out}. {#emotions_dlg.usage}" /></a></td>
-			<td><a class="emoticon_link" role="button" title="{#emotions_dlg.undecided}. {#emotions_dlg.usage}" href="javascript:EmotionsDialog.insert('smiley-undecided.gif','emotions_dlg.undecided');"><img src="img/smiley-undecided.gif" width="18" height="18" border="0" alt="{#emotions_dlg.undecided}. {#emotions_dlg.usage}" /></a></td>
-			<td><a class="emoticon_link" role="button" title="{#emotions_dlg.wink}. {#emotions_dlg.usage}" href="javascript:EmotionsDialog.insert('smiley-wink.gif','emotions_dlg.wink');"><img src="img/smiley-wink.gif" width="18" height="18" border="0" alt="{#emotions_dlg.wink}. {#emotions_dlg.usage}" /></a></td>
-			<td><a class="emoticon_link" role="button" title="{#emotions_dlg.yell}. {#emotions_dlg.usage}" href="javascript:EmotionsDialog.insert('smiley-yell.gif','emotions_dlg.yell');"><img src="img/smiley-yell.gif" width="18" height="18" border="0" alt="{#emotions_dlg.yell}. {#emotions_dlg.usage}" /></a></td>
-		</tr>
 	</table>
-	<div>{#emotions_dlg.usage}</div>
-</div>
+    </div>
 </body>
 </html>
+
+<script type="text/javascript">
+$('img').attr("onmouseover", "$('#description').html($(this).attr('alt')); return false;");
+$('img').attr("onmouseout", "$('#description').html('Choose an emoticon:'); return false;");
+</script>
