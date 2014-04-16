@@ -70,6 +70,22 @@
 					t._done();
 			});
 
+			ed.addCommand('mceActiveSpellCheck', function() {
+				if (!t.active) {
+				    t.active = true;
+				    t.removeWords();
+				    t._sendRPC('checkWords', [t.selectedLang, t._getWords()], function(r) {
+					    if (r.length > 0) {
+						var bookmark = ed.selection.getBookmark();
+						t._markWords(r);
+						ed.nodeChanged();
+						ed.selection.moveToBookmark(bookmark);
+						t.active = false;
+					    }
+					});
+				}
+			});
+
 			if (ed.settings.content_css !== false)
 				ed.contentCSS.push(url + '/css/content.css');
 
