@@ -777,13 +777,10 @@ define("tinymce/spellcheckerplugin/Plugin", [
 				finish();
 			}
 
-			var bookmark = editor.selection.getBookmark();
 
 			editor.setProgressState(true);
 			sendRpcCall("spellcheck", getTextMatcher().text, markErrors, errorCallback);
 			editor.focus();
-
-			editor.selection.moveToBookmark(bookmark);
 		}
 
 		function checkIfFinished() {
@@ -917,6 +914,8 @@ define("tinymce/spellcheckerplugin/Plugin", [
 		 * @param {Object} data Data object containing the words with suggestions.
 		 */
 		function markErrors(data) {
+			var bookmark = editor.selection.getBookmark();
+
 			var suggestions;
 
 			if (data.words) {
@@ -949,6 +948,7 @@ define("tinymce/spellcheckerplugin/Plugin", [
 
 			started = true;
 			editor.fire('SpellcheckStart');
+			editor.selection.moveToBookmark(bookmark);
 		}
 
 		var buttonArgs = {
