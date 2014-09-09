@@ -764,21 +764,13 @@ define("tinymce/spellcheckerplugin/Plugin", [
 		}
 
 		function spellcheck() {
-			if (started) {
-				finish();
-				return;
-			} else {
-				finish();
-			}
+			finish();
 
 			function errorCallback(message) {
 				editor.windowManager.alert(message);
-				editor.setProgressState(false);
 				finish();
 			}
 
-
-			editor.setProgressState(true);
 			sendRpcCall("spellcheck", getTextMatcher().text, markErrors, errorCallback);
 			editor.focus();
 		}
@@ -925,8 +917,6 @@ define("tinymce/spellcheckerplugin/Plugin", [
 				// Fallback to old format
 				suggestions = data;
 			}
-
-			editor.setProgressState(false);
 
 			if (isEmpty(suggestions)) {
 				editor.windowManager.alert('No misspellings found');
