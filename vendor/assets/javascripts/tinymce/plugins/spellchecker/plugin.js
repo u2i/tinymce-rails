@@ -767,7 +767,6 @@ define("tinymce/spellcheckerplugin/Plugin", [
 			finish();
 
 			function errorCallback(message) {
-				editor.windowManager.alert(message);
 				finish();
 			}
 
