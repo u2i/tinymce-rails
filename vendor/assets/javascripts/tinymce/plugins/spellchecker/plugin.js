@@ -771,7 +771,6 @@ define("tinymce/spellcheckerplugin/Plugin", [
 			}
 
 			sendRpcCall("spellcheck", getTextMatcher().text, markErrors, errorCallback);
-			editor.focus();
 		}
 
 		function checkIfFinished() {
