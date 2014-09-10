@@ -1,4 +1,6 @@
 tinymce.PluginManager.add('smileys', function (editor, url) {
+    var defaultEmoticonHeight = 16;
+    var defaultEmoticonWidth = 16;
     var defaultSmileys = [
                         [
                             { shortcut: '(^^^)', url: url + '/img/shark.gif', title: 'shark' },
@@ -30,7 +32,8 @@ tinymce.PluginManager.add('smileys', function (editor, url) {
     ];
 
     var smileys = editor.settings.smileys || defaultSmileys, fullSmileysList = editor.settings.extended_smileys ? smileys.concat(editor.settings.extended_smileys) : smileys;
-
+    var emoticonWidth = editor.settings.emoticon_width || defaultEmoticonWidth;
+    var emoticonHeight = editor.settings.emoticon_height || defaultEmoticonHeight;
     function getHtml() {
         var smileysHtml;
 
@@ -41,7 +44,7 @@ tinymce.PluginManager.add('smileys', function (editor, url) {
 
             tinymce.each(row, function (icon) {
                 smileysHtml += '<td><a href="#" data-mce-url="' + icon.url + '" tabindex="-1" title="' + icon.title + '"><img src="' +
-                    icon.url + '" style="width: 16px; height: 16px"></a></td>';
+                    icon.url + '" style="width: ' + emoticonWidth + 'px; height: ' +  emoticonHeight + 'px"></a></td>';
             });
 
             smileysHtml += '</tr>';
