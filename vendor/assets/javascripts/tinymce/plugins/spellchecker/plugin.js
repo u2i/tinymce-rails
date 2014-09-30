@@ -918,6 +918,7 @@ define("tinymce/spellcheckerplugin/Plugin", [
 
 			if (isEmpty(suggestions)) {
 				started = false;
+				editor.selection.moveToBookmark(bookmark);
 				return;
 			}
 
