@@ -904,7 +904,7 @@ define("tinymce/spellcheckerplugin/Plugin", [
 		 * @param {Object} data Data object containing the words with suggestions.
 		 */
 		function markErrors(data) {
-			var bookmark = editor.selection.getBookmark();
+			var bookmark = editor.selection.getBookmark(1);
 
 			var suggestions;
 
