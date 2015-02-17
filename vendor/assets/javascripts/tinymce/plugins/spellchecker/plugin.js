@@ -924,6 +924,8 @@ define("tinymce/spellcheckerplugin/Plugin", [
 
 			lastSuggestions = suggestions;
 
+		        finish();
+
 			getTextMatcher().find(getWordCharPattern()).filter(function(match) {
 				return !!suggestions[match.text];
 			}).wrap(function(match) {
